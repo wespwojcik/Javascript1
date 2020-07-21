@@ -30,16 +30,31 @@ function myFunkinc()
 {
 
     var example5 = 75;
-    example ++;
-    example --;
+    example5 ++;
     document.getElementById("demo5").innerHTML = example5;
 }
+function myFunkdec()
+{
+    var example6 = 75;
+    example6 --;
+    document.getElementById("demo6").innerHTML = example6;
 
-function myfunkRand()
+}
+
+function myFunkRand()
 {
 
     var x = Math.random();
-    document.getElementById("demo6").innerHTML = x;
+    document.getElementById("demo7").innerHTML = x;
+
+
+}
+
+function myFunkmod()
+{
+
+    var zee = 20 % 5;
+    document.getElementById("demo8").innerHTML = zee;
 
 
 }
