@@ -1,5 +1,5 @@
 
-function dataFUNK()
+    function dataFUNK()
 {
       let carr = {
         make: "dodge",
@@ -13,29 +13,31 @@ function dataFUNK()
       document.getElementById("car").innerHTML = carr.descript();
 }
 
+function WhileFUnk(n)
+{
+while(n < 4) {
+    document.write(n);
+    n++;
+}
+}
+
 
 function breakFUNK()
 {
-
-    function innerFUNK()
-    {
         let example = [" Pizza", " Hotdogs" , " hamburgers" , " buritos" , " salads" , " granola"];
         for(var i = 0; i < 6; i++)
         {
-        
-            while(i < 4) {
-            let num = i + 1;
-            document.write( "Hangover food option number " + num + example[i] + "<br>");
-            break;
-        }
-
+            
             if( i == 4)
             {
             document.write("The rest of the food on the list is not good for hangovers..")
             i = 6;
+            break;
             }
+            document.write(example[i] + "<br>")
         }
-    }
-document.getElementById("kitkat").innerHTML = innerFUNK();
+
+  
 
 }
+    
