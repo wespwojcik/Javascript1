@@ -91,7 +91,7 @@ function calculator_reset()
 //this function updates the screen with the contents of display_value
 function update_display()
 {
-    const display = document.querySelector('.calculator-scree');
+    const display = document.querySelector('.calculator-screen');
     display.value = calculator.display_value;
 }
 
@@ -107,14 +107,14 @@ keys.addEventListener('click', (event) => {
         return;
     }
 
-    if (target.classlist.contains('operator'))
+    if (target.classList.contains('operator'))
     {
         handle_operator(target.value);
         update_display();
         return;
     }
     // ensures that AC clears the numbers from the calculator
-    if (target.classlist.contains('all-clear'))
+    if (target.classList.contains('all-clear'))
     {
         calculator_reset();
         update_display();
