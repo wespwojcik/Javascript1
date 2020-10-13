@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Project</title>
+    <link rel="stylesheet" href="final_css_project.css" />
+    <script src="jquery-3.5.1.min.js"></script>
+  </head>
+  <!--body-->
+  <body class="background">
+    <!--defines background-->
+
+    <!--script-->
+    <script>
+      document.body.className += "fade-out";
+      $(function () {
+        $("body").removeClass("fade-out");
+      });
+    </script>
+    <!--script-->
+
+    <!--nav bar-->
+    <div class="navbar">
+      <a class="active" href="#Home">Home</a>
+      <a href="#About">About</a>
+      <a href="#GitHub">GitHub</a>
+      <a href="#Contact">Contact</a>
+    </div>
+    <!----->
+
+    <!--Home-->
+    <br />
+    <!--Breaks inserted to add space-->
+    <br />
+    <!---->
+
+    <!--Home and Image-->
+
+    <div id="home">
+      <img
+        src="img/wesleyphoto.jpg"
+        alt=""
+        id="wesimage"
+        style="width: 800px; height: 1000px"
+      />
+    </div>
+
+    <!--Image text-->
+    <div class="image_text">
+      <h1 style="font-size: 8vw; color: white" ;>Wesley Paul Wojcik</h1>
+      <p>
+        <strong>
+          <center>
+            <q
+              >The computer programmer is a creator of universes for which he
+              alone is the lawgiver. <br />No playwright, no stage director, no
+              emperor, however powerful, has ever exercised such absolute
+              authority to arrange a stage or <br />field of battle and to
+              command such unswervingly dutiful actors or troops.
+            </q>
+            <br />-Joseph Weizenbaum<br />
+            <br />
+            My name is Wesley Paul Wojcik. Welcome to my portfolio website. On
+            it, I will tell you about my background and experience.<br />
+            <br />Thank you for stopping by and enjoy!
+          </center>
+        </strong>
+      </p>
+    </div>
+    <!--image text-->
+    <!-- Slideshow section -->
+    <div id="Slideshow">
+      <div id="Slideshow_Background">
+        <div id="Slideshow_Container">
+          <div class="mySlides fade">
+            <div class="Slide_Number">1 / 6</div>
+            <img
+              class="Slide_Show_Images"
+              src="Stylesheet/Images/Picture_of_You.jpg"
+              style="width: 100%"
+            />
+            <div class="text">I'm available to assist you on your project!</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="Slide_Number">2 / 6</div>
+            <img
+              class="Slide_Show_Images"
+              src="Stylesheet/Images/HTML_CSS_and_JavaScript.jpeg"
+              style="width: 100%"
+            />
+            <div class="text">
+              I am a full-stack software developer,<br />
+              trained in:<br />HTML, CSS, JavaScript, Python, Django, mySQL
+            </div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="Slide_Number">3 / 6</div>
+            <img
+              class="Slide_Show_Images"
+              src="Stylesheet/Images/Python.png"
+              style="width: 100%"
+            />
+            <div class="text">the popular programming language Python,</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="Slide_Number">4 / 6</div>
+            <img
+              class="Slide_Show_Images"
+              src="Stylesheet/Images/C_Sharp_and_Dot_NET.png"
+              style="width: 100%"
+            />
+            <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="Slide_Number">5 / 6</div>
+            <img
+              class="Slide_Show_Images"
+              src="Stylesheet/Images/SQL_and_Database.jpg"
+              style="width: 100%"
+            />
+            <div class="text">back end development, databases and SQL.</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="Slide_Number">6 / 6</div>
+            <img
+              class="Slide_Show_Images"
+              src="Stylesheet/Images/Coding_1.jpg"
+              style="width: 100%"
+            />
+            <div class="text">
+              <a onclick="openForm()" href="#Contact" style="color: white"
+                >Contact me now!</a
+              >
+            </div>
+          </div>
+
+          <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+      </div>
+    </div>
+
+    <!--About section-->
+    <div class="row" id="about">
+      <div class="column_2">
+        <!--left column-->
+        <img src="img/Development.jpg" class="image" alt="" />
+      </div>
+
+      <div class="column_1">
+        <!--right column-->
+        <h1>About</h1>
+        <p>
+          I am a software developer who loves to create and code! In my spare
+          time, I enjoy doing hot yoga, and bio-hacking my health for a stronger
+          and sharper mind. <br /><br />I am a graduate of
+          <a href="https://www.learncodinganywhere.com" target="_blank"
+            >The Tech Academy</a
+          >’s Software Developer Boot Camp, and trained and experienced in the
+          following web and programming languages: HTML, CSS, JavaScript, SQL,
+          C# and more. <br /><br />I am a full-stack developer and would love to
+          work with you on your project. <a href="#Contact">Contact</a> me
+          below!
+        </p>
+      </div>
+    </div>
+    <!--About section-->
+
+    <!-- GitHub section-->
+    <div class="row" id="github">
+      <div class="column_1">
+        <!--left column-->
+
+        <h1>GitHub</h1>
+        <p>
+          You can view my coding projects on my Github profile: <br />
+          <center><a href="" target="_blank">Wesley's GitHub</a></center>
+        </p>
+      </div>
+
+      <div class="column_2">
+        <!--Right column-->
+        <a class="" href=""></a>
+        <img class="image" src="img/GitHub.png" alt="" />
+      </div>
+    </div>
+    <!--Github Section-->
+
+    <!--contact section-->
+    <div class="row" id="contact">
+      <div class="column_3">
+        <!--contact image, left column-->
+        <img class="image" src="img/Contact.jpg" alt="contact_image" />
+      </div>
+
+      <div class="column_1">
+        <!--contact image, left column-->
+        <h1>Contact</h1>
+        <form action="" method="get">
+          <!-- this specifies where to send the form data and how; it is left blank-->
+          <label>Name:</label>
+          <input type="text" placeholder="Please enter your name here" />
+          <label>Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Please enter your email here"
+          />
+          <label>Message:</label>
+          <input
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Please write your message here"
+          />
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+
+    <!--Fotter section-->
+    <footer>
+      <p>
+        <center>
+          &copy; Prosper Consulting Inc.,
+          <a href="https://learncodinganywhere.com/">The Tech Academy</a>
+        </center>
+        <br />
+      </p>
+    </footer>
+
+    <script src="js/one_page_website.js"></script>
+  </body>
+</html>

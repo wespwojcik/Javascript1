@@ -1,0 +1,412 @@
+/* body */
+
+body {
+    margin: 0% /* site will display all the way to the edge of the browser screen */
+}
+html {
+    background-color: black;
+    scroll-behavior: smooth; /* This ensures that the page scrolling is smooth when the nav bar is clicked */
+
+}
+body{
+    opacity: 1;
+    opacity: 1; /* This and transition affect the page loading fade in effect */
+    transition: 3s opacity; /* This causes a 3 second fade in, you can change this time if you choose */
+	letter-spacing: .2vw;
+	font-family: Avant Garde, Helvetica; 
+	font-size: 1.5vw;
+}
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+/* Navbar */
+.navbar {
+    overflow: hidden; /* this endures that any content that overflows beyond the boundary of our nav bar is not displayed */
+    background-color: purple;/* this colors the navbar purple */
+    position: fixed; /* this keeps the navbar at the top of the screen as we scroll */
+    top: 0; /* this ensures no space is displayed above the navbar */
+    width: 100%; /* this makes the navbar span the entire width of the page */
+    z-index: 1; /* this ensures other elements don't display over the nav bar */
+    position:fixed;
+    -webkit-animation: moveNav 5s;/* safari 4.0 - 8.0*/
+    animation: moveNav 5s;
+}
+
+/* navbar */
+.navbar a{
+    float: left; /* This specifies that the text floats on the left on the navbar */
+	display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
+	color: white; /* This is the font color for text on our navbar */
+	padding: .75vw 1vw; /* This adds padding around our text */
+	text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
+	font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
+	font-size: 1.5vw; /* This specifies the font size for text on our navbar */
+	text-align: center; /* This centers the text within its container */
+    position: relative;
+	-webkit-animation: movenavText 5.75s; /* Safari 4.0 - 8.0 */
+    animation: movenavText 5.75s;
+	letter-spacing: .2vw;
+}
+/* The animation effect for moving the nav bar in from above the top of the screen upon page load */
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+  }
+  
+  /* The animation effect for moving the nav bar in from above the top of the screen upon page load */
+  @keyframes movenavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+  }
+  
+  
+  /* This animation effect causes the overlay video text to move up from the bottom of the page upon page load */
+  @keyframes movevideoText {
+    from {top: -100vw;}
+    to {top: 0px;}
+  }
+
+/* navbar hover effect */
+.navbar a:hover {
+    background-color: #F4F4F4; /* this defines the background color that will display when you hover over the text on the navbar */
+    color: black; /* text is displayed black when hovered over */
+    font-weight: bold; /* makes text bold when hovered */
+    cursor: pointer;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
+}
+
+.navbar a.active { /* the active selector styles a link */
+    background-color: darkgray; /* this specifies the background color behind the home button on the navbar */
+}
+/* This causes the video to zoom out from a zoomed in position upon page load */
+@keyframes zoominoutsinglefeatured {
+    0% {
+        transform: scale(1.5,1.5);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+#wesimage {
+    position:fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 100%;
+    min-width: 1024px;
+    /* Set up proportionate scaling */
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} 
+
+
+
+
+/* text over the image */
+.image_text {
+    background: rgba(0,0,0,0.5); /*this provides a semi-transparent background for the text to sit over */
+    color: white;
+    width: 100%;
+    padding-top: .1vh; /* This adds padding around the text so that the background goes slightly beyond the text */
+	padding-bottom: 1vh;
+	margin-top: 23%;
+    position: relative;
+	-webkit-animation: moveNav 4s; /* Safari 4.0 - 8.0 */
+    animation: movevideoText 4s;
+}
+
+/*slide show styling*/
+#Slideshow_Background {
+background: rgba(255,255,255,0.35); /*this creates a slightly transparent white background that's placed over the video */
+}
+
+.mySlides {
+    display:none;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from{opacity: .4}
+    to {opacity: 1}
+}
+
+/*slideshow section / container */
+
+#Slideshow_Container {
+    width: 39.5vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+
+.Slide_Show_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0,0,0,.75);
+    width: auto;
+}
+
+/* next and previous buttons */
+/* Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    margin-top: -0vw;
+    color: darkgray;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+  }
+
+  /* Positioning the right-hand next button */
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Hover effect on slide show buttons */
+  .Previous:hover, .Next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+  /* Slideshow text */
+  .text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    background-color: rgba(0,0,0,0.75);
+    font-weight: bold;
+    border-radius: 7px 7px 7px 7px;
+  }
+  
+  /* Number text (1/6, 2/6, etc.) - we have set this display to none, which means these are hidden */
+  .Slide_Number {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-family: Perpetua, Rockwell Extra Bold;
+    letter-spacing: .1vw; 
+    font-size: 1.5vw;
+    font-weight: bold;
+    display: none;
+    }
+  
+  /* The dots under the slideshow */
+  .dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Hover effect for slideshow dots */ 
+  .active, .dot:hover {
+    background-color: black;
+  }
+  
+  /* Fading animation for slideshow */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;  
+  }
+  
+  
+/* Table - this section covers the styling of the columns and rows within our table */
+* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
+	box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+}
+
+.column_1 {
+    float: left;
+    width: 50%; /* this ensure one column takes half the page width */
+    padding: 10px;
+    padding-top: 3%;/* this ensure there is space between the top of the column and our headings */
+    height: 400px; /* this sets the height of our column at 400 pixels - if you change the text within the columns, you need to adjust the column heights accordingly */
+    background-color: #b89ae4;
+}
+
+.column_2 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 1.9%;
+    height: 400px;
+    background-color: #b89ae4;
+}
+
+.column_3 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3.5%;
+    height: 450px;
+    background-color: #b89ae4;
+} 
+
+.row:after { /*This inserts something after the content of selected elements */
+    content: ""; /* by leaving this blank, we are allowing the footer (covered lower down) to be displayed- removing it makes the footer overwrite a column */
+    display: table; /* the display property specifies the type of display; the table value tells the browser to treat the element as a table */
+    clear: both; /* this clears any other element from floating on the left of an element */
+}
+
+h1 {
+    text-transform: uppercase; /* we are capitalizing our headings */
+    font-family: "trebuchet MS", optima;
+    text-align: center;
+    margin-top: 3%; /*we are adding a small margin above the headings */
+    color: #1a1a1a;
+}
+
+
+/* paragraph elements */
+p {
+    font-family: Perpetua, Rockwell extra Bold;
+    text-align: justify;
+    letter-spacing: 1px; /* this expands the text slightly */
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* center align elements - this embraces all centered text */
+center {
+    font-family: Perpetua, Rockwell Extra Bold;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Anchor elements */
+a {
+    color: blue; /*we are ensuring all links are blue */
+}
+
+/* quotation elements */
+q {
+    font-size: italic;
+    font-weight: bold;
+}
+
+ .image {
+    filter: grayscale(75%); /* this rids our pictures of 75% of their color */
+    border-radius: 8px;
+    max-width: 100%px;
+    height: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block
+} 
+
+/* contact form */
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc; /* we are setting a solid border and its colors */
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; /*this specifies how and element is resized;vertical alows the user to resize height of the element */
+    font-family: Perpetua, Rockewell Extra Bold;
+}
+
+/* submit button */
+input[type=submit] {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Perpetua, Rockewell Extra Bold;
+}
+    
+/*  Hover effect for submit button */
+input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    transform: scale(1.5);
+    transition: transform 1.5s;
+}
+
+/* Form elememt */
+form { 
+	border-radius: 5px; 
+	background-color: #f2f2f2;
+	padding: 20px;
+	font-family: "Trebuchet MS", Optima;
+}
+
+/* Center align element hover effect */
+center:hover {
+	transition: transform 2s;
+	transform: scale(1.1);
+}
+
+/* Paragraph element hover effect */
+p:hover {
+	color: #00004d;	
+    transition: transform 1s;
+	transform: scale(1.01);
+}
+
+/* Heading 1 element hover effect */
+h1:hover {
+	color: black;
+	font-weight: normal; /* Makes the text no longer bold when hovered over */ 
+}
+
+/* Image element hover effects */
+image:hover {
+	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+    transition: transform 1s;
+	transform: scale(1.1);
+}
+
+/* Footer element */
+footer {
+
+	padding: 2%;
+	background-color:white;
+}
